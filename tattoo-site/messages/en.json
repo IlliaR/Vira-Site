@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact",
+    "book": "Book a session",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "home": {
+    "heroTagline": "Tattoo artist & illustrator · Berlin",
+    "heroCta": "Book a session",
+    "introHeading": "About my work",
+    "projectsHeading": "Selected work",
+    "seeMore": "See more",
+    "galleryHeading": "Latest work",
+    "viewAll": "View all"
+  },
+  "newsletter": {
+    "heading": "Stay in touch",
+    "subheading": "Flash announcements, open slots, and process insights — straight to your inbox.",
+    "placeholder": "Your email address",
+    "consent": "I agree to receive occasional newsletters. I can unsubscribe at any time. See the",
+    "privacyLink": "Privacy Policy",
+    "submit": "Subscribe",
+    "success": "Thank you! Please check your inbox to confirm.",
+    "error": "Something went wrong. Please try again.",
+    "duplicate": "This email is already registered."
+  },
+  "gallery": {
+    "heading": "Gallery",
+    "all": "All",
+    "loading": "Loading…",
+    "empty": "No images in this category."
+  },
+  "about": {
+    "heading": "About",
+    "processHeading": "My process",
+    "testimonialsHeading": "What clients say"
+  },
+  "contact": {
+    "heading": "Request a session",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "idea": "Describe your tattoo idea",
+    "size": "Approximate size",
+    "placement": "Body placement",
+    "reference": "Upload a reference image (optional)",
+    "dates": "Preferred dates",
+    "privacy": "I have read the",
+    "privacyLink": "Privacy Policy",
+    "privacyEnd": "and consent to my data being processed.",
+    "submit": "Send inquiry",
+    "success": "Thank you for your inquiry! I'll get back to you within 3–5 business days.",
+    "error": "Something went wrong. Please try again.",
+    "captchaError": "Please confirm you are not a robot.",
+    "studioHeading": "Studio",
+    "studioCopy": "By appointment only."
+  },
+  "footer": {
+    "legal": "Legal",
+    "impressum": "Impressum",
+    "datenschutz": "Privacy Policy",
+    "agb": "Terms",
+    "rights": "All rights reserved."
+  },
+  "cookie": {
+    "heading": "Cookies & Privacy",
+    "text": "This website uses only technically necessary cookies. No tracking or analytics cookies are set.",
+    "accept": "Accept all",
+    "reject": "Reject",
+    "more": "Learn more"
+  },
+  "newsletterConfirm": {
+    "heading": "Email confirmed!",
+    "text": "You're now subscribed. Great to have you.",
+    "cta": "Back to home",
+    "invalid": "This confirmation link is invalid or has expired."
+  },
+  "newsletterUnsubscribe": {
+    "heading": "Unsubscribed",
+    "text": "You have been successfully removed from the newsletter.",
+    "cta": "Back to home",
+    "invalid": "This link is invalid or has expired."
+  },
+  "impressum": {
+    "heading": "Impressum"
+  },
+  "datenschutz": {
+    "heading": "Privacy Policy"
+  },
+  "agb": {
+    "heading": "Terms & Conditions"
+  },
+  "meta": {
+    "defaultTitle": "Vira Linevych — Tattoo Artist & Illustrator, Berlin",
+    "defaultDescription": "Tattoo artist & illustrator based in Berlin. Blackwork, fine line, illustration. Appointments on request.",
+    "galleryTitle": "Gallery — Vira Linevych",
+    "aboutTitle": "About — Vira Linevych",
+    "contactTitle": "Contact & Booking — Vira Linevych"
+  }
+}

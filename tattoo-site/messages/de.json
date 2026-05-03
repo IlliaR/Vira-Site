@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "gallery": "Galerie",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "book": "Termin buchen",
+    "menu": "Menü",
+    "close": "Schließen"
+  },
+  "home": {
+    "heroTagline": "Tätowiererin & Illustratorin · Berlin",
+    "heroCta": "Termin buchen",
+    "introHeading": "Über meine Arbeit",
+    "projectsHeading": "Ausgewählte Arbeiten",
+    "seeMore": "Mehr sehen",
+    "galleryHeading": "Neueste Arbeiten",
+    "viewAll": "Alle ansehen"
+  },
+  "newsletter": {
+    "heading": "In Kontakt bleiben",
+    "subheading": "Flash-Ankündigungen, freie Termine und Einblicke in den Prozess — direkt in dein Postfach.",
+    "placeholder": "Deine E-Mail-Adresse",
+    "consent": "Ich stimme zu, gelegentliche Newsletter zu erhalten. Ich kann mich jederzeit abmelden. Weitere Informationen in der",
+    "privacyLink": "Datenschutzerklärung",
+    "submit": "Anmelden",
+    "success": "Danke! Bitte bestätige deine E-Mail-Adresse.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "duplicate": "Diese E-Mail ist bereits registriert."
+  },
+  "gallery": {
+    "heading": "Galerie",
+    "all": "Alle",
+    "loading": "Lädt…",
+    "empty": "Keine Bilder in dieser Kategorie."
+  },
+  "about": {
+    "heading": "Über mich",
+    "processHeading": "Mein Prozess",
+    "testimonialsHeading": "Was meine Kunden sagen"
+  },
+  "contact": {
+    "heading": "Termin anfragen",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon (optional)",
+    "idea": "Beschreibe deine Tattoo-Idee",
+    "size": "Ungefähre Größe",
+    "placement": "Körperstelle",
+    "reference": "Referenzbild hochladen (optional)",
+    "dates": "Bevorzugte Termine",
+    "privacy": "Ich habe die",
+    "privacyLink": "Datenschutzerklärung",
+    "privacyEnd": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "submit": "Anfrage senden",
+    "success": "Danke für deine Anfrage! Ich melde mich innerhalb von 3–5 Werktagen.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "captchaError": "Bitte bestätige, dass du kein Roboter bist.",
+    "studioHeading": "Studio",
+    "studioCopy": "Termine nur nach Vereinbarung."
+  },
+  "footer": {
+    "legal": "Rechtliches",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "agb": "AGB",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "cookie": {
+    "heading": "Cookies & Datenschutz",
+    "text": "Diese Website verwendet nur technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies gesetzt.",
+    "accept": "Alle akzeptieren",
+    "reject": "Ablehnen",
+    "more": "Mehr erfahren"
+  },
+  "newsletterConfirm": {
+    "heading": "E-Mail bestätigt!",
+    "text": "Du bist jetzt angemeldet. Schön, dich dabei zu haben.",
+    "cta": "Zurück zur Startseite",
+    "invalid": "Dieser Bestätigungslink ist ungültig oder abgelaufen."
+  },
+  "newsletterUnsubscribe": {
+    "heading": "Abmeldung",
+    "text": "Du wurdest erfolgreich vom Newsletter abgemeldet.",
+    "cta": "Zurück zur Startseite",
+    "invalid": "Dieser Link ist ungültig oder abgelaufen."
+  },
+  "impressum": {
+    "heading": "Impressum"
+  },
+  "datenschutz": {
+    "heading": "Datenschutzerklärung"
+  },
+  "agb": {
+    "heading": "Allgemeine Geschäftsbedingungen"
+  },
+  "meta": {
+    "defaultTitle": "Vira Linevych — Tätowiererin & Illustratorin, Berlin",
+    "defaultDescription": "Tätowiererin & Illustratorin in Berlin. Blackwork, Fine Line, Illustration. Termine auf Anfrage.",
+    "galleryTitle": "Galerie — Vira Linevych",
+    "aboutTitle": "Über mich — Vira Linevych",
+    "contactTitle": "Kontakt & Buchung — Vira Linevych"
+  }
+}

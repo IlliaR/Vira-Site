@@ -1,0 +1,106 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Category {
+  id           String         @id @default(cuid())
+  slug         String         @unique
+  nameEn       String
+  nameDe       String
+  order        Int            @default(0)
+  visible      Boolean        @default(true)
+  images       GalleryImage[]
+  projectCases ProjectCase[]
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+}
+
+model GalleryImage {
+  id         String    @id @default(cuid())
+  filename   String
+  altTextEn  String    @default("")
+  altTextDe  String    @default("")
+  categoryId String?
+  category   Category? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  tags       String    @default("")
+  featured   Boolean   @default(false)
+  order      Int       @default(0)
+  width      Int       @default(0)
+  height     Int       @default(0)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+model ProjectCase {
+  id            String    @id @default(cuid())
+  titleEn       String
+  titleDe       String
+  descriptionEn String    @default("")
+  descriptionDe String    @default("")
+  heroImage     String
+  categoryId    String?
+  category      Category? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  linkTarget    String    @default("/gallery")
+  order         Int       @default(0)
+  visible       Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model TextBlock {
+  id      String @id @default(cuid())
+  page    String
+  key     String
+  valueEn String @default("")
+  valueDe String @default("")
+
+  @@unique([page, key])
+}
+
+model Link {
+  id      String  @id @default(cuid())
+  label   String
+  url     String
+  type    String  @default("social")
+  icon    String  @default("")
+  order   Int     @default(0)
+  visible Boolean @default(true)
+}
+
+model NewsletterSubscriber {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  status    String    @default("pending")
+  consentAt DateTime?
+  consentIp String?
+  token     String?   @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model BookingInquiry {
+  id             String   @id @default(cuid())
+  name           String
+  email          String
+  phone          String   @default("")
+  idea           String
+  size           String   @default("")
+  placement      String   @default("")
+  referenceImage String   @default("")
+  preferredDates String   @default("")
+  status         String   @default("new")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
