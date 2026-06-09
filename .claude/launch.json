@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tattoo-site",
+      "runtimeExecutable": "C:\\Users\\Illia\\Desktop\\Vira Site\\tattoo-site\\start-dev.bat",
+      "runtimeArgs": [],
+      "cwd": "C:\\Users\\Illia\\Desktop\\Vira Site\\tattoo-site",
+      "port": 3000,
+      "autoPort": false
+    }
+  ]
+}

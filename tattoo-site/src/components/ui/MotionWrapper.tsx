@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 interface MotionWrapperProps {
   children: React.ReactNode;
@@ -18,9 +17,6 @@ export default function MotionWrapper({
   direction = 'up',
   once = true,
 }: MotionWrapperProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once, margin: '-80px' });
-
   const initial =
     direction === 'up'
       ? { opacity: 0, y: 28 }
@@ -28,15 +24,11 @@ export default function MotionWrapper({
         ? { opacity: 0, x: -24 }
         : { opacity: 0 };
 
-  const animate = inView
-    ? { opacity: 1, y: 0, x: 0 }
-    : initial;
-
   return (
     <motion.div
-      ref={ref}
       initial={initial}
-      animate={animate}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      viewport={{ once, amount: 0.1 }}
       transition={{ duration: 0.65, ease: [0.4, 0, 0.2, 1], delay }}
       className={className}
     >

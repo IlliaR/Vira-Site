@@ -1,0 +1,4 @@
+// Root layout — locale layout (app/[locale]/layout.tsx) handles html/body/providers
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return children;
+}

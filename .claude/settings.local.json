@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Illia\\\\Desktop\\\\Vira Site\\\\tattoo-site\\\\.env.example\" \"C:\\\\Users\\\\Illia\\\\Desktop\\\\Vira Site\\\\tattoo-site\\\\.env\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\Illia\\\\Desktop\\\\Vira Site\\\\tattoo-site\\\\.claude\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\Illia\\\\Desktop\\\\Vira Site\\\\.claude\")",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
