@@ -8,7 +8,7 @@ export default function ContentEditor({ blocks: initial }: { blocks: TextBlock[]
   const [saving, setSaving] = useState<string | null>(null);
   const [saved, setSaved] = useState<string | null>(null);
 
-  const pages = [...new Set(blocks.map((b) => b.page))];
+  const pages = Array.from(new Set(blocks.map((b) => b.page)));
 
   async function save(block: TextBlock) {
     setSaving(block.id);

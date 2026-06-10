@@ -25,6 +25,7 @@ export default async function HomePage({ params: { locale } }: Props) {
     prisma.galleryImage.findMany({
       orderBy: { order: 'asc' },
       take: 16,
+      include: { category: true },
     }),
     prisma.textBlock.findMany({ where: { page: 'home' } }),
   ]);
@@ -45,7 +46,9 @@ export default async function HomePage({ params: { locale } }: Props) {
 
       {introText && <IntroText text={introText} />}
 
-      <hr className="max-w-[1280px] mx-auto px-6 md:px-10" />
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10">
+        <hr />
+      </div>
 
       <ProjectGrid
         projects={projects}

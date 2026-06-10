@@ -1,9 +1,10 @@
 import { getTranslations } from 'next-intl/server';
+import { buildPageMetadata } from '@/lib/seo';
 
 type Props = { params: { locale: string } };
 
 export async function generateMetadata({ params: { locale } }: Props) {
-  return { title: locale === 'de' ? 'Impressum — Vira Linevych' : 'Impressum — Vira Linevych' };
+  return buildPageMetadata({ locale, path: '/impressum', title: 'Impressum' });
 }
 
 export default async function ImpressumPage({ params: { locale } }: Props) {

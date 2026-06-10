@@ -4,6 +4,7 @@ import Image from 'next/image';
 import MotionWrapper from '@/components/ui/MotionWrapper';
 import SvgAccent from '@/components/ui/SvgAccent';
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo';
 
 export const revalidate = 60;
 
@@ -11,7 +12,12 @@ type Props = { params: { locale: string } };
 
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'meta' });
-  return { title: t('aboutTitle') };
+  return buildPageMetadata({
+    locale,
+    path: '/about',
+    title: t('aboutTitle'),
+    description: t('aboutDescription'),
+  });
 }
 
 export default async function AboutPage({ params: { locale } }: Props) {

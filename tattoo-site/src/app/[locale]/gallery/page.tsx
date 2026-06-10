@@ -4,6 +4,7 @@ import MasonryGrid from '@/components/gallery/MasonryGrid';
 import CategoryFilter from '@/components/gallery/CategoryFilter';
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo';
 
 export const revalidate = 60;
 
@@ -14,7 +15,12 @@ type Props = {
 
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'meta' });
-  return { title: t('galleryTitle') };
+  return buildPageMetadata({
+    locale,
+    path: '/gallery',
+    title: t('galleryTitle'),
+    description: t('galleryDescription'),
+  });
 }
 
 export default async function GalleryPage({ params: { locale }, searchParams }: Props) {

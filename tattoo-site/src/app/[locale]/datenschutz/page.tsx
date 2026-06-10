@@ -1,9 +1,13 @@
+import { buildPageMetadata } from '@/lib/seo';
+
 type Props = { params: { locale: string } };
 
 export async function generateMetadata({ params: { locale } }: Props) {
-  return {
-    title: locale === 'de' ? 'Datenschutzerklärung — Vira Linevych' : 'Privacy Policy — Vira Linevych',
-  };
+  return buildPageMetadata({
+    locale,
+    path: '/datenschutz',
+    title: locale === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy',
+  });
 }
 
 export default function DatenschutzPage({ params: { locale } }: Props) {
