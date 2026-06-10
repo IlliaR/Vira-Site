@@ -96,8 +96,11 @@
   "meta": {
     "defaultTitle": "Vira Linevych — Tattoo Artist & Illustrator, Berlin",
     "defaultDescription": "Tattoo artist & illustrator based in Berlin. Blackwork, fine line, illustration. Appointments on request.",
-    "galleryTitle": "Gallery — Vira Linevych",
-    "aboutTitle": "About — Vira Linevych",
-    "contactTitle": "Contact & Booking — Vira Linevych"
+    "galleryTitle": "Gallery",
+    "aboutTitle": "About",
+    "contactTitle": "Contact & Booking",
+    "galleryDescription": "Portfolio of Vira Linevych: blackwork, fine line and illustrative tattoos from Berlin.",
+    "aboutDescription": "About Vira Linevych — tattoo artist & illustrator in Berlin. Background, style and approach.",
+    "contactDescription": "Request a tattoo appointment in Berlin: booking form for projects with Vira Linevych."
   }
 }

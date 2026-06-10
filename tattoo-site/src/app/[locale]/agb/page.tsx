@@ -1,9 +1,13 @@
+import { buildPageMetadata } from '@/lib/seo';
+
 type Props = { params: { locale: string } };
 
 export async function generateMetadata({ params: { locale } }: Props) {
-  return {
-    title: locale === 'de' ? 'AGB — Vira Linevych' : 'Terms — Vira Linevych',
-  };
+  return buildPageMetadata({
+    locale,
+    path: '/agb',
+    title: locale === 'de' ? 'AGB' : 'Terms & Conditions',
+  });
 }
 
 export default function AgbPage({ params: { locale } }: Props) {

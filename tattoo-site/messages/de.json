@@ -96,8 +96,11 @@
   "meta": {
     "defaultTitle": "Vira Linevych — Tätowiererin & Illustratorin, Berlin",
     "defaultDescription": "Tätowiererin & Illustratorin in Berlin. Blackwork, Fine Line, Illustration. Termine auf Anfrage.",
-    "galleryTitle": "Galerie — Vira Linevych",
-    "aboutTitle": "Über mich — Vira Linevych",
-    "contactTitle": "Kontakt & Buchung — Vira Linevych"
+    "galleryTitle": "Galerie",
+    "aboutTitle": "Über mich",
+    "contactTitle": "Kontakt & Buchung",
+    "galleryDescription": "Portfolio von Vira Linevych: Blackwork, Fine Line und illustrative Tattoos aus Berlin.",
+    "aboutDescription": "Über Vira Linevych — Tätowiererin & Illustratorin in Berlin. Hintergrund, Stil und Arbeitsweise.",
+    "contactDescription": "Tattoo-Termin in Berlin anfragen: Buchungsformular für Projekte bei Vira Linevych."
   }
 }

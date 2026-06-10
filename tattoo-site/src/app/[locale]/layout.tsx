@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/routing';
+import { SITE_URL, OG_IMAGE, pageAlternates } from '@/lib/seo';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import MobileBar from '@/components/layout/MobileBar';
@@ -19,36 +20,29 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { locale } }: Props) {
   const t = await getTranslations({ locale, namespace: 'meta' });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yoursite.de';
 
   return {
-    metadataBase: new URL(siteUrl),
+    metadataBase: new URL(SITE_URL),
     title: {
       default: t('defaultTitle'),
       template: `%s | Vira Linevych`,
     },
     description: t('defaultDescription'),
-    alternates: {
-      canonical: `${siteUrl}/${locale}`,
-      languages: {
-        'de': `${siteUrl}/de`,
-        'en': `${siteUrl}/en`,
-      },
-    },
+    alternates: pageAlternates(locale),
     openGraph: {
       type: 'website',
       locale: locale === 'de' ? 'de_DE' : 'en_US',
-      url: `${siteUrl}/${locale}`,
+      url: `${SITE_URL}/${locale}`,
       siteName: 'Vira Linevych',
       title: t('defaultTitle'),
       description: t('defaultDescription'),
-      images: [{ url: `${siteUrl}/og-image.jpg`, width: 1200, height: 630 }],
+      images: [OG_IMAGE],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('defaultTitle'),
       description: t('defaultDescription'),
-      images: [`${siteUrl}/og-image.jpg`],
+      images: [OG_IMAGE.url],
     },
     robots: {
       index: true,
@@ -69,7 +63,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
         '@type': 'Person',
         name: 'Vira Linevych',
         jobTitle: 'Tattoo Artist & Illustrator',
-        url: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yoursite.de'}/${locale}`,
+        url: `${SITE_URL}/${locale}`,
         sameAs: ['https://instagram.com/'],
       },
       {
@@ -83,7 +77,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
           addressLocality: 'Berlin',
           addressCountry: 'DE',
         },
-        url: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yoursite.de'}/${locale}`,
+        url: `${SITE_URL}/${locale}`,
         priceRange: '€€',
       },
     ],

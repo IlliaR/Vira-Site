@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import type { GalleryImage } from '@/types';
@@ -14,8 +14,24 @@ interface LightboxProps {
   onNext: () => void;
 }
 
+const SWIPE_THRESHOLD = 50;
+
 export default function Lightbox({ images, currentIndex, locale, onClose, onPrev, onNext }: LightboxProps) {
   const img = images[currentIndex];
+  const touchStartX = useRef<number | null>(null);
+
+  function handleTouchStart(e: React.TouchEvent) {
+    touchStartX.current = e.touches[0].clientX;
+  }
+
+  function handleTouchEnd(e: React.TouchEvent) {
+    if (touchStartX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(dx) < SWIPE_THRESHOLD) return;
+    if (dx > 0) onPrev();
+    else onNext();
+  }
 
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
@@ -49,6 +65,8 @@ export default function Lightbox({ images, currentIndex, locale, onClose, onPrev
         transition={{ duration: 0.2 }}
         className="fixed inset-0 z-[300] bg-black/95 flex items-center justify-center"
         onClick={onClose}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         {/* Close */}
         <button

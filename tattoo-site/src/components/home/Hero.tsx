@@ -14,7 +14,7 @@ export default function Hero({ tagline }: HeroProps) {
   const locale = useLocale();
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-end overflow-hidden bg-black">
+    <section className="relative h-screen supports-[height:100dvh]:h-dvh min-h-[600px] flex items-end overflow-hidden bg-black">
       {/* Hero background image */}
       <div className="absolute inset-0">
         <Image
@@ -79,7 +79,7 @@ export default function Hero({ tagline }: HeroProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 right-8 md:right-10 flex flex-col items-center gap-2"
+        className="absolute bottom-[4.5rem] md:bottom-8 right-8 md:right-10 flex flex-col items-center gap-2"
       >
         <div className="w-px h-12 bg-white/30 animate-[pulse_2s_ease-in-out_infinite]" />
       </motion.div>

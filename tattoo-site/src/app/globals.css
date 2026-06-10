@@ -6,27 +6,23 @@
 /* Download from: https://fonts.google.com/specimen/Cormorant+Garamond         */
 /* Place woff2 files in public/fonts/                                           */
 
+/* Shipped files: CormorantGaramond-Italic, CormorantGaramond-SemiBoldItalic.    */
+/* Non-italic Cormorant is not shipped — normal-style headings fall back to     */
+/* Georgia (see the base h1–h6 rule).                                            */
+
 @font-face {
   font-family: 'CormorantGaramond';
   src: url('/fonts/CormorantGaramond-Italic.woff2') format('woff2');
-  font-weight: 400;
+  font-weight: 400 500;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'CormorantGaramond';
-  src: url('/fonts/CormorantGaramond-BoldItalic.woff2') format('woff2');
-  font-weight: 700;
+  src: url('/fonts/CormorantGaramond-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600 700;
   font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CormorantGaramond';
-  src: url('/fonts/CormorantGaramond-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
   font-display: swap;
 }
 
@@ -39,18 +35,11 @@
   font-display: swap;
 }
 
+/* Inter SemiBold is not shipped — Medium covers the 500–600 range. */
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/Inter-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
-  font-weight: 600;
+  font-weight: 500 600;
   font-style: normal;
   font-display: swap;
 }
@@ -77,6 +66,8 @@
     line-height: 1.6;
     /* Space for mobile sticky bar */
     padding-bottom: env(safe-area-inset-bottom);
+    /* .full-bleed elements are 100vw wide (incl. scrollbar) — clip the overflow */
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {

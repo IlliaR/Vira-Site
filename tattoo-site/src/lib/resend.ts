@@ -13,7 +13,7 @@ export async function sendConfirmationEmail(email: string, token: string, locale
 
   await resend.emails.send({
     from: FROM,
-    replyTo: REPLY_TO,
+    reply_to: REPLY_TO,
     to: email,
     subject: isDE
       ? `Bitte bestätige deine Newsletter-Anmeldung – ${SITE_NAME}`
@@ -46,7 +46,7 @@ export async function sendBookingNotification(data: {
 }) {
   await resend.emails.send({
     from: FROM,
-    replyTo: data.email,
+    reply_to: data.email,
     to: REPLY_TO,
     subject: `New booking inquiry from ${data.name}`,
     html: `

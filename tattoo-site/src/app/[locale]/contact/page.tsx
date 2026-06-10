@@ -4,12 +4,18 @@ import BookingForm from '@/components/contact/BookingForm';
 import MapEmbed from '@/components/contact/MapEmbed';
 import MotionWrapper from '@/components/ui/MotionWrapper';
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo';
 
 type Props = { params: { locale: string } };
 
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'meta' });
-  return { title: t('contactTitle') };
+  return buildPageMetadata({
+    locale,
+    path: '/contact',
+    title: t('contactTitle'),
+    description: t('contactDescription'),
+  });
 }
 
 export default async function ContactPage({ params: { locale } }: Props) {

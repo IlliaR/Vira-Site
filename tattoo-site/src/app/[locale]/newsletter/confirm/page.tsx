@@ -4,6 +4,11 @@ import { prisma } from '@/lib/prisma';
 
 type Props = { params: { locale: string }; searchParams: { token?: string } };
 
+// Token-based confirmation page — must not be indexed
+export const metadata = {
+  robots: { index: false, follow: false },
+};
+
 export default async function NewsletterConfirmPage({ params: { locale }, searchParams }: Props) {
   const t = await getTranslations({ locale, namespace: 'newsletterConfirm' });
   const { token } = searchParams;

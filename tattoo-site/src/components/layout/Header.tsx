@@ -25,6 +25,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Lock background scroll while the mobile menu overlay is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
   const navLinks = [
     { href: `/${locale}/gallery`, label: t('gallery') },
     { href: `/${locale}/about`, label: t('about') },
@@ -83,7 +91,7 @@ export default function Header() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-1"
+            className="md:hidden flex flex-col justify-center gap-1.5 p-3 -mr-3 min-h-[44px]"
             onClick={() => setMenuOpen(true)}
             aria-label={t('menu')}
           >
@@ -96,7 +104,7 @@ export default function Header() {
 
       {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-[100] bg-white flex flex-col">
+        <div className="fixed inset-0 z-[100] bg-white flex flex-col overflow-y-auto">
           <div className="flex items-center justify-between px-6 h-16 border-b border-black/10">
             <Link
               href={`/${locale}`}

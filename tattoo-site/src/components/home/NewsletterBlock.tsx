@@ -61,7 +61,7 @@ export default function NewsletterBlock() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={t('placeholder')}
                   required
-                  className="flex-1 bg-white/10 border border-white/20 text-white placeholder:text-white/30 font-sans text-sm px-4 py-3 focus:outline-none focus:border-red transition-colors"
+                  className="flex-1 bg-white/10 border border-white/20 text-white placeholder:text-white/30 font-sans text-base sm:text-sm px-4 py-3 focus:outline-none focus:border-red transition-colors"
                 />
                 <button
                   type="submit"

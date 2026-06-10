@@ -10,8 +10,9 @@ interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
   error?: string;
 }
 
+// text-base on mobile: iOS Safari auto-zooms on focus when input font-size < 16px
 const inputBase =
-  'w-full bg-white border border-black/20 text-black font-sans text-sm px-4 py-3 focus:outline-none focus:border-black transition-colors placeholder:text-black/40';
+  'w-full bg-white border border-black/20 text-black font-sans text-base sm:text-sm px-4 py-3 focus:outline-none focus:border-black transition-colors placeholder:text-black/40';
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ label, error, className = '', id, ...props }, ref) => {
